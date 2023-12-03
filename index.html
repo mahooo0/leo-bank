@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>leo bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+  <body class="body">
+
+    <main class="main">
+        <div class="main_section  d-flex flex-column align-items-center">
+
+            <div class="money_section">
+                <h1 class="money " id="money">0</h1>
+                
+                  <p id="own"> </p>
+                  <p >kredit:0</p>
+                
+
+            </div>
+
+            <div class="button_section w-100 d-flex align-items-center g-1">
+              <div class="d-flex align-items-center flex-column">
+                <button class="button1 btn-dark d-flex align-items-center justify-content-center" id="plusbtn">+</button>
+                <p>пополнить карту</p>
+              </div>
+              <div class="d-flex align-items-center flex-column">
+                <button class="button1 d-flex align-items-center justify-content-center"id="minusbtn">></button>
+                <p>перевести на карту</p>
+              </div>
+
+            </div>
+            <div class="card_section">
+               <img src="data:image/png;base64,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" 
+               alt=""> 
+            </div>
+            <div class="operations_section w-100 bg-white ">
+              <section>
+                <h5 class="text  text-start m-2" id="A"></h5>
+              </section>
+              <ul class="operations" id="operations">
+                
+
+                
+              </ul> 
+            </div>
+
+
+        </div>
+    </main>
+    <div  class="replenishment container d-flex justify-content-center align-items-center d-none" id="replenishment">
+        <div class="box  container d-flex flex-column" >
+          <img src="загружено (1).png" alt="">
+          <input type="number" placeholder="сумма паполнения" class="form-control " id="summa1">
+          <div class="d-flex justify-content-around m-3">
+            
+            <button class="btn btn-success" id="replenishmentbtn"> пополнить</button>
+            <button class="btn btn-danger" id="otmena">отмена</button>
+          </div>
+
+
+        </div>
+    </div>
+    <div class="money_transfer d-flex justify-content-center align-items-center d-none" id="money_transfer">
+      <div class="box container d-flex flex-column" >
+        <img src="загружено (1).png" alt="">
+        <label for="ccn" class="text-white m-2">введите номер карты</label>
+        <input id="ccn"  class="form-control" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+        <label for="ccn" class="text-white m-2">введите сумму </label>
+        <input type="number" placeholder="сумма паполнения" class="form-control " id="transfer_money">
+        <button class="btn btn-success m-3" id="money_transferbtn"> перевести</button>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
