@@ -25,6 +25,7 @@ const ccn=document.querySelector("#ccn")
 const transfer_money=document.querySelector("#transfer_money")
 const A=document.querySelector("#A")
 const own=document.querySelector("#own")
+const otmena2=document.querySelector("#otmena2")
 
 plusbtn.addEventListener("click",()=>{
     replenishment.classList.remove("d-none")
@@ -95,6 +96,9 @@ money_transferbtn.addEventListener("click",()=>{
     obj.opiration.push(el)
     let lisst= obj.opiration.reverse().join(",")
     operations.innerHTML=lisst
+    money_transfer.classList.add("d-none")
+})
+otmena2.addEventListener("click",()=>{
     money_transfer.classList.add("d-none")
 })
 console.log(summa1);
